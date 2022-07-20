@@ -26,6 +26,7 @@
       <tr><th>credit: </th><td><input type="text" name="credit" value="{{$item->credit}}"></td></tr>
       <tr><th>c_money: </th><td><input type="text" name="c_money" value="{{$item->c_money}}"></td></tr>
       <tr><th></th><td><input type="submit" value="更新"></td></tr>
+
    </table>
    </form>
 @endsection

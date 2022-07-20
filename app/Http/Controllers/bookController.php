@@ -42,6 +42,7 @@ class bookController extends Controller
         $book->fill($form)->save();
         return redirect('/kouka3');
     }
+    
     public function edit(Request $request)
     {
         $item = Book::find($request->id);

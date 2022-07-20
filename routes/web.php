@@ -17,12 +17,7 @@ Route::get('/', function () {
 
 // Route::get('kouka3','');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('kouka3', 'bookController@index');
+Route::get('kouka3', 'bookController@index')->middleware('auth');
 Route::post('kouka3/find', 'bookController@find');
 Route::get('kouka3/show', 'bookController@show');
 Route::get('kouka3/add', 'bookController@add');
@@ -33,3 +28,9 @@ Route::get('kouka3/del', 'bookController@del');
 Route::post('kouka3/remove', 'bookController@remove');
 
 // Route::resource('kouka3','bookController');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

@@ -3,7 +3,7 @@
 @section('title', 'kouka3')
 
 @section('menu_title')
-ユーザー新規登録画面
+家計簿新規登録画面
 @endsection
 
 @section('content')
@@ -17,6 +17,7 @@
 </div>
 @endif
    <form action="/kouka3/create" method="post">
+    <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
    <table>
       @csrf
       <tr><th>name: </th><td><input type="text" name="name" value="{{old('name')}}"></td></tr>
@@ -25,7 +26,6 @@
     <tr><th>d_money: </th><td><input type="text" name="d_money" value="{{old('d_money')}}"></td></tr>
     <tr><th>credit: </th><td><input type="text" name="credit" value="{{old('credit')}}"></td></tr>
     <tr><th>c_money: </th><td><input type="text" name="c_money" value="{{old('c_money')}}"></td></tr>
-    <tr><th>user_id: </th><td><input type="text" name="user_id" value="{{old('user_id')}}"></td></tr>
     <tr><th></th><td><input type="submit" value="新規登録"></td></tr>
    </table>
    </form>

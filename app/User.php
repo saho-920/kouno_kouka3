@@ -36,9 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function book(){
-        return $this ->belongsTo('App\Book');
-    }
+    // public function book(){
+    //     return $this ->belongsTo('App\Book');
+    // }
     public function getData()
     {
         return $this->book->name;

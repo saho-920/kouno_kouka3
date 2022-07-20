@@ -1,6 +1,10 @@
 <html>
 <head>
    <title>@yield('title')</title>
+
+   <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
    <style>
    body {font-size:16pt; color:#999; margin: 5px; }
    h1 { font-size:50pt; text-align:right; color:#f6f6f6;
@@ -15,7 +19,16 @@
 </head>
 <body>
    <h1>@yield('title')</h1>
+
    <h2>@yield('menu_title')</h2>
+   <a class="btn btn-primary" role="button" href="{{ route('logout') }}"
+   onclick="event.preventDefault();
+                 document.getElementById('logout-form').submit();">
+    {{ __('Logout') }}
+</a>
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+   @csrf
+</form>
 <div class="menu_content">
    @yield('menu_content')
    </div>
