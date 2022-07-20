@@ -31,3 +31,5 @@ Route::get('kouka3/edit', 'bookController@edit');
 Route::post('kouka3/update', 'bookController@update');
 Route::get('kouka3/del', 'bookController@del');
 Route::post('kouka3/remove', 'bookController@remove');
+
+// Route::resource('kouka3','bookController');

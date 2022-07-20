@@ -12,22 +12,22 @@ class BooksTableSeeder extends Seeder
     public function run()
     {
         $param = [
+            'name'=>'hikaru',
             'date' => '2022/07/01',
             'debit' => '給料',
             'd_money' => '150000',
-            'member_id' =>'1',
+            'user_id' =>'1',
         ];
         DB::table('books')->insert($param);
 
         $param = [
+            'name'=>'daisuke',
             'date' => '2022/07/03',
             'credit' => '日用品費',
             'c_money' => '500',
-            'member_id' =>'3',
+            'user_id' =>'3',
         ];
         DB::table('books')->insert($param);
-
-
 
     }
 }

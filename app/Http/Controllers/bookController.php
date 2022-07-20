@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use Illuminate\Http\Request;
+use App\Http\Requests\BookRequest;
 
 class bookController extends Controller
 {
@@ -23,7 +24,7 @@ class bookController extends Controller
 
     public function show(Request $request)
     {
-        $item = Book::where('name',$request->input)->first();
+        $item = Book::where('id',$request->id)->first();
         return view('kouka3.show', ['item' => $item]);
     }
 
@@ -34,8 +35,8 @@ class bookController extends Controller
 
     public function create(Request $request)
     {
-        $this->validate($request,book::$rules);
-        $book = new book;
+        $this->validate($request,Book::$rules);
+        $book = new Book;
         $form = $request->all();
         unset($form['_token']);
         $book->fill($form)->save();

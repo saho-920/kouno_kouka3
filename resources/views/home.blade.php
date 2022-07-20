@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <a href="/kouka3">メインページ</a>
                 </div>
             </div>
         </div>

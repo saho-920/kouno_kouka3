@@ -1,6 +1,6 @@
 @extends('layouts.kouka3')
 
-@section('title', 'Jissyu')
+@section('title', 'kouka3')
 
 @section('menu_title')
 ユーザー新規登録画面
@@ -10,7 +10,7 @@
 @if (count($errors) > 0)
 <div>
     <ul>
-        @foreach ($errors as $error)
+        @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
     </ul>
@@ -20,7 +20,12 @@
    <table>
       @csrf
       <tr><th>name: </th><td><input type="text" name="name" value="{{old('name')}}"></td></tr>
-    <tr><th>password: </th><td><input type="text" name="password" value="{{old('password')}}"></td></tr>
+      <tr><th>date: </th><td><input type="text" name="date" value="{{old('date')}}"></td></tr>
+      <tr><th>debit: </th><td><input type="text" name="debit" value="{{old('debit')}}"></td></tr>
+    <tr><th>d_money: </th><td><input type="text" name="d_money" value="{{old('d_money')}}"></td></tr>
+    <tr><th>credit: </th><td><input type="text" name="credit" value="{{old('credit')}}"></td></tr>
+    <tr><th>c_money: </th><td><input type="text" name="c_money" value="{{old('c_money')}}"></td></tr>
+    <tr><th>user_id: </th><td><input type="text" name="user_id" value="{{old('user_id')}}"></td></tr>
     <tr><th></th><td><input type="submit" value="新規登録"></td></tr>
    </table>
    </form>
