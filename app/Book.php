@@ -10,6 +10,7 @@ class Book extends Model
 {
     protected $guarded = array('id');
 
+    // ルールの定義
     public static $rules = array(
        'date' => 'required',
        'debit' => 'nullable',
@@ -18,6 +19,7 @@ class Book extends Model
        'c_money' => 'nullable',
     );
 
+    // getData
     public function getData(){
         return $this->name.$this->date.$this->debit.$this->d_money.$this->credit.$this->c_money;
     }

@@ -20,6 +20,7 @@
     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
    <table>
       @csrf
+      {{--  新規登録画面のレイアウト  --}}
       <tr><th>name: </th><td><input type="text" name="name" value="{{old('name')}}"></td></tr>
       <tr><th>date: </th><td><input type="text" name="date" value="{{old('date')}}"></td></tr>
       <tr><th>debit: </th><td><input type="text" name="debit" value="{{old('debit')}}"></td></tr>

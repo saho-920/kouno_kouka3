@@ -8,6 +8,7 @@ use App\Http\Requests\BookRequest;
 
 class bookController extends Controller
 {
+    // メインページ
     public function index(Request $request)
     {
         $items = Book::all();
@@ -15,19 +16,21 @@ class bookController extends Controller
         return view('kouka3.index', $param);
     }
 
+    // 名前による検索
     public function find(Request $request)
     {
         $item = Book::where('name',$request->input)->first();
         return view('kouka3.show', ['item' => $item]);
     }
 
-
+    // 詳細画面表示
     public function show(Request $request)
     {
         $item = Book::where('id',$request->id)->first();
         return view('kouka3.show', ['item' => $item]);
     }
 
+    // 新規登録処理
     public function add(Request $request)
     {
         return view('kouka3.add');
@@ -43,6 +46,7 @@ class bookController extends Controller
         return redirect('/kouka3');
     }
     
+    // 更新処理
     public function edit(Request $request)
     {
         $item = Book::find($request->id);
@@ -60,7 +64,7 @@ class bookController extends Controller
     }
 
 
-
+    // 削除処理
     public function del(Request $request)
     {
         $item = Book::find($request->id);

@@ -19,6 +19,7 @@
    <form action="/kouka3/update" method="post">
    <table>
       @csrf
+      {{--  更新画面のレイアウト  --}}
       <input type="hidden" name="id" value="{{$item->id}}">
       <tr><th>date: </th><td><input type="text" name="date" value="{{$item->date}}"></td></tr>
       <tr><th>debit: </th><td><input type="text" name="debit" value="{{$item->debit}}"></td></tr>

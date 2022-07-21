@@ -7,6 +7,7 @@
 
 @endsection
 @section('content')
+    {{--  詳細画面のレイアウト  --}}
    <table>
    <tr><th>Name</th><th>date</th><th>debit</th><th>d_money</th><th>credit</th><th>c_money</th></tr>
        <tr>

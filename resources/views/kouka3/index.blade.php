@@ -13,6 +13,7 @@
     <input type="submit" value="検索">
     </form>
    <a href="/kouka3/add">新規登録</a>
+   {{--  メインページのレイアウト  --}}
    <table>
     <tr><th>Name</th><th>date</th><th>debit</th><th>d_money</th><th>credit</th><th>c_money</th><th>Select</th><th>Update</th><th>Delete</th></tr>
     @foreach ($items as $item)

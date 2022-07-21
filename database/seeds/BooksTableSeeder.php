@@ -11,6 +11,7 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
+        // シーダーでデータを入れる
         $param = [
             'name'=>'hikaru',
             'date' => '2022/07/01',
