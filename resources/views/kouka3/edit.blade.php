@@ -17,7 +17,8 @@
 </div>
 @endif
    <form action="/kouka3/update" method="post">
-   <table>
+    <table class="table table-hover">
+
       @csrf
       {{--  更新画面のレイアウト  --}}
       <input type="hidden" name="id" value="{{$item->id}}">

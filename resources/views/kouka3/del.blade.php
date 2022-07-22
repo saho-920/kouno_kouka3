@@ -8,7 +8,8 @@
 
 @section('content')
    <form action="/kouka3/remove" method="post">
-   <table>
+      <table class="table table-hover">
+
       @csrf
       {{--  削除画面のレイアウト  --}}
       <input type="hidden" name="id" value="{{$item->id}}">

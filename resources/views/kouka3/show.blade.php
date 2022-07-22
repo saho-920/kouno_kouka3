@@ -8,7 +8,9 @@
 @endsection
 @section('content')
     {{--  詳細画面のレイアウト  --}}
-   <table>
+@if(isset($item))
+<table class="table table-hover">
+
    <tr><th>Name</th><th>date</th><th>debit</th><th>d_money</th><th>credit</th><th>c_money</th></tr>
        <tr>
         <td>{{$item->name}}</td>
@@ -19,6 +21,10 @@
         <td>{{$item->c_money}}</td>
        </tr>
    </table>
+@else
+    一致する人物がいませんでした
+@endif
+
 @endsection
 
 @section('footer')
